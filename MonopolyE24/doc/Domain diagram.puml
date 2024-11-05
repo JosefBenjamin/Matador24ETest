@@ -1,0 +1,44 @@
+@startuml
+!pragma layout smetana
+
+Object Game
+Object Board
+Object Dice
+Object Player
+Object Ruleset
+Object Bank
+Object Field
+Object Prison
+Object Parking
+Object Deed
+Object Brewery
+Object Shippingline
+Object Property
+Object Plot
+
+Board *-- Game: has -a
+Dice *-- Game: has -a
+Player *-- Game: has -a
+Ruleset *-- Game: has -a
+Bank *-- Game: has -a
+Field *-- Board: has -a
+Prison <|-- Field: is-a
+Property <|-- Field: is-a
+Parking <|-- Field: is-a
+Brewery <|-- Property: is-a
+Shippingline <|-- Property: is-a
+Plot <|-- Property: is-a
+Deed *-- Brewery: has -a
+Deed *-- Plot: has -a
+Deed *-- Shippingline: has -a
+
+
+
+
+
+
+
+
+
+
+@enduml

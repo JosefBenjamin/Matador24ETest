@@ -1,0 +1,18 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+Main -> Game: new()
+'indsæt instansieringer i Game konstruktor
+'indsæt kaldet til setup()
+'indsæt hvad der sker i toppen af setup()
+alt data[] not empty && continue saved game
+loop for each s in data[]
+'indsæt hvad der sker i loopet
+end
+else
+'indsæt kaldet til registerPlayers()
+
+end
+
+@enduml
+

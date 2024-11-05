@@ -1,0 +1,25 @@
+@startuml
+
+actor user
+
+usecase StartGame
+usecase RegisterPlayers
+usecase LandAndAct
+usecase ThrowAndMove
+usecase EndGame
+user --> StartGame
+user --> EndGame
+StartGame --> RegisterPlayers
+RegisterPlayers --> ThrowAndMove
+ThrowAndMove --> LandAndAct
+
+LandAndAct --> EndGame
+
+
+
+
+
+
+
+
+@enduml
